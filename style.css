@@ -120,13 +120,13 @@ header nav .left-item {
   margin-left: 10px;
   margin-bottom: 7px;
 }
-header nav .left-item a {
+header nav .left-item p {
   font-family: var(--minecraft-font);
   text-decoration: none;
   color: #9a6735;
   text-shadow: 0px 0px 4px #000;
 }
-header nav .left-item a,
+header nav .left-item p,
 header nav .left-item b {
   font-size: 1.4rem;
   font-size: clamp(1.4rem, 1.2799999999999998rem + 0.6000000000000001vw, 2rem);
@@ -251,18 +251,10 @@ header nav .right-items .ri2 img {
   .slider {
     height: 330px;
   }
-
-  .slide {
-    /* width: 60vw; */
-  }
 }
 @media screen and (max-width: 375px) {
   .slider {
     height: 300px;
-  }
-
-  .slide {
-    /* width: 60vw; */
   }
 }
 @media screen and (max-width: 375px) {
