@@ -40,10 +40,6 @@ body {
   user-select: none;
   font-family: var(--minecraft-font);
   border-radius: 0px 10px 0px 0px;
-
-  @media screen and (max-width: 320px) {
-    display: none;
-  }
 }
 .sticky-text2 {
   position: fixed;
@@ -57,16 +53,25 @@ body {
   user-select: none;
   font-family: var(--minecraft-font);
   border-radius: 10px 0 0 0;
-
-  @media screen and (max-width: 320px) {
-    display: none;
-  }
 }
 .sticky-text,
 .sticky-text2 {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
+
+  @media screen and (max-width: 425px) {
+    /* display: none; */
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 375px) {
+    /* display: none; */
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 375px) {
+    /* display: none; */
+    font-size: 0.6rem;
+  }
 }
 
 .sticky-text.hidden,
@@ -102,6 +107,11 @@ header {
     align-items: center;
     height: 100%;
 
+    @media screen and (max-width: 486px) {
+      justify-content: center;
+      margin-top: 25px;
+    }
+
     .left-item {
       height: 100%;
       margin-left: 10px;
@@ -109,15 +119,18 @@ header {
 
       a {
         font-family: var(--minecraft-font);
-        font-size: 1rem;
-        font-size: clamp(
-          1rem,
-          0.7142857142857143rem + 1.4285714285714286vw,
-          2rem
-        );
         text-decoration: none;
         color: #9a6735;
         text-shadow: 0px 0px 4px rgb(0, 0, 0);
+      }
+      a,
+      b {
+        font-size: 1.4rem;
+        font-size: clamp(
+          1.4rem,
+          1.2799999999999998rem + 0.6000000000000001vw,
+          2rem
+        );
       }
     }
 
@@ -128,7 +141,7 @@ header {
       align-items: center;
       gap: 10px;
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 486px) {
         display: none;
       }
 
@@ -183,14 +196,28 @@ header {
 
 /* SLDIERRRRRRRRRR */
 .slider {
-  height: 300px;
+  height: 500px;
   overflow: hidden;
-  position: relative;
   width: 100%;
-  background-image: url(assets/030302.png);
   display: flex;
   align-items: center;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      transparent 70%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 10),
+      transparent 40%
+    ),
+    url(assets/RealismCraft_screenshot_0.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
+
 
 .slide-track {
   display: flex;
